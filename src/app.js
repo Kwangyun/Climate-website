@@ -9,7 +9,7 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 //setup handlebar and view locations
 app.set('view engine', 'hbs')
@@ -82,6 +82,6 @@ app.get('*',(req,res) => {
         errorMessage: "page not found"
     })
 })
-app.listen(port, () => {
-    console.log("server UP" + port)
+app.listen(PORT, () => {
+    console.log("server UP" + PORT)
 });
